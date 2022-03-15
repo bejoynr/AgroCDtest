@@ -7,11 +7,11 @@ RUN pip3 install Flask
 #RUN pip3 install opencv-python
 
 #RUN pip3 install numpy
-
-COPY app.py /app.py
+WORKDIR /app
+COPY src /app
 
 
 #RUN rm -rvf /bin/sh
 
 
-CMD python3 /app.py 
+CMD python3 /app/app.py 
